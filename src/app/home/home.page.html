@@ -22,20 +22,13 @@
       </ion-toolbar>
     </ion-header>
     <swiper-container [loop]="true" [pagination]="true">
-      <swiper-slide>
-        <h1 class="red-tittle">TITULO</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur nemo perspiciatis a optio,
-          incidunt odit dolor earum delectus deserunt maxime animi accusantium nobis, est mollitia, voluptatum
-          repellendus
-          ipsam dignissimos?</p>
-        <img src="https://www.nationalgeographic.com.es/medio/2022/12/12/aguila-2_d7d2206b_221212153725_310x310.jpg" />
-        <p>swipe para continuar</p>
+      <swiper-slide *ngFor="let slide of slides">
+        <h1 class="red-tittle">{{slide.title}}</h1>
+        <p class="{{slide.class}}">
+          {{slide.description}}</p>
+        <img src={{slide.image}} />
+        <p>{{slide.help_text}}</p>
       </swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide>
     </swiper-container>
   </ion-content>
 </div>
