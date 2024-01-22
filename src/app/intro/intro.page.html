@@ -9,9 +9,6 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-button (click)="goToAbout()">Ver intro</ion-button>
-  </ion-content>
   <ion-content class="ion-padding">MAS INFORMACION AQUI</ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -30,12 +27,13 @@
       </ion-toolbar>
     </ion-header>
     <swiper-container [loop]="true" [pagination]="true">
-      <swiper-slide *ngFor="let slide of slides">
+      <swiper-slide class="sld1" *ngFor="let slide of slides">
         <h2 class="red-tittle">{{slide.title}}</h2>
         <p class="{{slide.class}}">
           {{slide.description}}</p>
         <img src={{slide.image}} />
         <p>{{slide.help_text}}</p>
+        <ion-button (click)="goToAbout()" color="dark">GO HOME</ion-button>
       </swiper-slide>
       <swiper-slide>
         <ion-card class="card_1">
@@ -50,7 +48,7 @@
         </ion-card>
       </swiper-slide>
       <swiper-slide>
-        <ion-card class="card_1">
+        <ion-card class="card_2">
           <img class="img1" src="../../assets/image/img_2.png" />
           <ion-card-header>
             <ion-card-title>VIERNE 3 DE MAYO</ion-card-title>
@@ -62,7 +60,7 @@
         </ion-card>
       </swiper-slide>
       <swiper-slide>
-        <ion-card class="card_1">
+        <ion-card class="card_3">
           <img class="img1" src="../../assets/image/img_3.png" />
           <ion-card-header>
             <ion-card-title>SABADO 4 DE MAYO</ion-card-title>
