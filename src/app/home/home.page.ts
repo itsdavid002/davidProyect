@@ -9,9 +9,10 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class HomePage {
 
-  constructor(private router: Router, private storage: Storage) {}
+  constructor(private router: Router,
+    private storage: Storage) { }
 
-  goToAbout(){
+  goToAbout() {
     console.log("go to intro");
     this.router.navigateByUrl("/intro");
     this.storage.set('mostreLaIntro', true);
