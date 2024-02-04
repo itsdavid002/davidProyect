@@ -8,7 +8,7 @@
   <img src="../../assets/image/logo_login.png" alt="logo" class="logo">
 </ion-avatar>
 
-<ion-content>
+<ion-content class="fondo">
   <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
     <ion-item>
       <ion-input label="Email" labelPlacement="floating" placeholder="Enter Email adress"
@@ -24,7 +24,7 @@
     </div>
     <ion-item>
       <ion-input label="Password" labelPlacement="floating" placeholder="Enter your password"
-        formControlName="password"></ion-input>
+        formControlName="password" type="password"></ion-input>
     </ion-item>
     <div>
       <ng-container *ngFor="let validation of validation_messages.password">
@@ -43,9 +43,9 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/register']">Registrarse</ion-button>
+  <ion-toolbar color="danger">
+    <ion-buttons >
+      <ion-button class="re" [routerLink]="['/register']">Registrarse</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>

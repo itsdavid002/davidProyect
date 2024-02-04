@@ -1,6 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons>
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>
       <ion-button (click)="goToLogin()">volver</ion-button>
     </ion-buttons>
     <ion-title>register</ion-title>
@@ -74,6 +75,6 @@
       </ng-container>
     </div>
     <br>
-    <ion-button type="submit" [disabled]="!registerForm.valid" color="succes" shape="round" expand="full">Register</ion-button>
+    <ion-button type="submit" [disabled]="!registerForm.valid" color="success" shape="round" expand="full">Register</ion-button>
   </form>
 </ion-content>

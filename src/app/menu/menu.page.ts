@@ -17,11 +17,17 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
 
-  closeMenu(){
+  closeMenu() {
     console.log("cerrar menu")
     this.menu.close();
   }
-  logout(){
+  logout() {
     this.navCtrl.navigateRoot("/login")
+  }
+  goIntro() {
+    this.navCtrl.navigateRoot("menu/intro")
+  }
+  goToHome() {
+    this.navCtrl.navigateRoot("menu/home")
   }
 }

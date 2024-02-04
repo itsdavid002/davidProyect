@@ -19,10 +19,6 @@ export class IntroPage {
   ]
   constructor(private router: Router, private storage: Storage) { }
 
-  goToAbout() {
-    console.log("go to home")
-    this.router.navigateByUrl("/menu/home")
-  }
 
   ionViewDidEnter() {
     console.log("ya entre y vi la intro")

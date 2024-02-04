@@ -12,8 +12,11 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>
-          home
+        <ion-item (click)="goIntro()">
+          Intro
+        </ion-item>
+        <ion-item (click)="goToHome()">
+          Home
         </ion-item>
         <ion-item (click)="logout()">
           <ion-icon name="log-out"></ion-icon>
